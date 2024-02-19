@@ -19,6 +19,12 @@ Pasos a seguir:
 
 4. Se hace el pseudo aleatorizador con la congruencia lineal
 
+4.1. Se itera sobre la semilla para la cantidad de resultados
+
+4.2. Se va operando a partir de la semilla y del resultado de esta
+
+4.3. Se devuelve la array de resultados
+
 5. Se crean los prints de los posibles numeros aleatorios
 
 6. Se modifican los prints para que se muestre en forma de barritas
@@ -28,8 +34,12 @@ Pasos a posterior: ....
 tiradas = 0
 resultados = []
 
-def Aleatorizador():
-
+def Aleatorizador(semilla):
+    resultados = []
+    for i in range(semilla):
+        a = 4387438
+        b = 98980
+        resultado = resultado.append( (((a * b) * semilla) % 12) + 1)
 
 
 def Histograma():

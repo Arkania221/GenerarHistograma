@@ -21,8 +21,12 @@ Pasos a seguir:
 
 5. Se crean los prints de los posibles numeros aleatorios
 
-6. Se modifican los prints para que se muestre en forma de barritas 
+6. Se modifican los prints para que se muestre en forma de barritas
+
+Pasos a posterior: .... 
 """
+tiradas = 0
+resultados = []
 
 def Aleatorizador():
 
@@ -33,4 +37,4 @@ def Histograma():
 
 
 def Programa():
-
+tiradas = int(input("Agrega la cantidad de tiradas"))

@@ -32,8 +32,6 @@ Pasos a seguir:
 Pasos a posterior: .... 
 """
 
-
-
 def Aleatorizador(veces):
     a = 4387438
     b = 98980
@@ -42,18 +40,30 @@ def Aleatorizador(veces):
     resultados = []
     for i in range(veces):
         semilla = (a * semilla + b) % m
-        resultados.append(((semilla % 12) + 1))
-    return(resultados)
+        resultados.append((semilla % 11) + 2)
+    return resultados
+
 
 
 def Histograma(resultados):
-
+    caja = 0
+    num = 0
     for i in range(13):
         cantidad = resultados.count(i)
+        
+        
+        if cantidad > caja and i > 1:
+            caja = cantidad
+            num = i
+        else:
+            pass
+        
+        
         if i == 0 or i == 1:
             pass
         else:
             print("Numero ", i, ": ", ("* " * cantidad))
+    print("La maxima ha sido ", num, "con la cantidad de: ", caja)
 
 
 def Programa():

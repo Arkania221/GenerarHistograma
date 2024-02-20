@@ -45,15 +45,21 @@ def Aleatorizador(veces):
         resultados.append(((semilla % 12) + 1))
     return(resultados)
 
-"""
-def Histograma():
-"""
+
+def Histograma(resultados):
+
+    for i in range(13):
+        cantidad = resultados.count(i)
+        if i == 0 or i == 1:
+            pass
+        else:
+            print("Numero ", i, ": ", ("* " * cantidad))
 
 
 def Programa():
     tiradas = int(input("Agrega la cantidad de tiradas: "))
     resultados = Aleatorizador(tiradas)
-    print(resultados)
+    Histograma(resultados)
 
 
 Programa()

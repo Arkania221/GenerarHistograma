@@ -34,17 +34,26 @@ Pasos a posterior: ....
 tiradas = 0
 resultados = []
 
-def Aleatorizador(semilla):
+def Aleatorizador(veces):
+    a = 4387438
+    b = 98980
+    m = 2**32 - 1
+    semilla = 343
     resultados = []
-    for i in range(semilla):
-        a = 4387438
-        b = 98980
-        resultado = resultado.append( (((a * b) * semilla) % 12) + 1)
+    for i in range(veces):
+        semilla = (a * semilla + b) % m
+        resultados.append(((semilla % 12) + 1))
+    return(resultados)
 
-
+"""
 def Histograma():
-
+"""
 
 
 def Programa():
-tiradas = int(input("Agrega la cantidad de tiradas"))
+    tiradas = int(input("Agrega la cantidad de tiradas: "))
+    resultados = Aleatorizador(tiradas)
+    print(resultados)
+
+
+Programa()

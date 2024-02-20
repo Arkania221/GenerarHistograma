@@ -31,8 +31,8 @@ Pasos a seguir:
 
 Pasos a posterior: .... 
 """
-tiradas = 0
-resultados = []
+
+
 
 def Aleatorizador(veces):
     a = 4387438
